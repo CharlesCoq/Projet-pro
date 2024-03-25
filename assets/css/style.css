@@ -1,12 +1,27 @@
-body {
+:root {
+    /* light theme */
+    --text-color: #000000;
+    --bg-color: #ffffff;
+    --title-color: #4444a1;
+    --part-color: #fdfdfd8f;
+    --button-border: #0000002f;
+    --box-shadow: #00000028;
+}
+
+
+html body {
     overflow-x: hidden;
 
     margin: 0;
     padding: 0;
+    padding-top: 51px;
 
     font-family: "DM Sans", sans-serif;
     font-size: 15px;
-    color: black;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
 
     background-image: radial-gradient(circle at 46% 40%, rgba(228, 228, 228, 0.06) 0%, rgba(228, 228, 228, 0.06) 13%, transparent 13%, transparent 100%), radial-gradient(circle at 11% 41%, rgba(198, 198, 198, 0.06) 0%, rgba(198, 198, 198, 0.06) 19%, transparent 19%, transparent 100%), radial-gradient(circle at 52% 23%, rgba(14, 14, 14, 0.06) 0%, rgba(14, 14, 14, 0.06) 69%, transparent 69%, transparent 100%), radial-gradient(circle at 13% 85%, rgba(148, 148, 148, 0.06) 0%, rgba(148, 148, 148, 0.06) 44%, transparent 44%, transparent 100%), radial-gradient(circle at 57% 74%, rgba(232, 232, 232, 0.06) 0%, rgba(232, 232, 232, 0.06) 21%, transparent 21%, transparent 100%), radial-gradient(circle at 59% 54%, rgba(39, 39, 39, 0.06) 0%, rgba(39, 39, 39, 0.06) 49%, transparent 49%, transparent 100%), radial-gradient(circle at 98% 38%, rgba(157, 157, 157, 0.06) 0%, rgba(157, 157, 157, 0.06) 24%, transparent 24%, transparent 100%), radial-gradient(circle at 8% 6%, rgba(60, 60, 60, 0.06) 0%, rgba(60, 60, 60, 0.06) 12%, transparent 12%, transparent 100%), linear-gradient(90deg, rgb(252, 252, 252), rgb(252, 252, 252));
     background-position: center;
@@ -20,7 +35,7 @@ nav {
     margin: 0;
     padding: 0;
 
-    background-color: white;
+    background-color: var(--bg-color);
     border-bottom: solid 1px rgba(0, 0, 0, 0.103);
 
     z-index: 2;
@@ -33,6 +48,7 @@ nav>ul {
 
     width: 100%;
     padding-left: 0;
+    margin-left: 0;
     margin: 15px;
 
     list-style-type: none;
@@ -47,14 +63,13 @@ nav>ul>li>a {
     position: relative;
     text-decoration: none;
 
-    color: black;
+    color: var(--text-color);
 }
 
 nav>ul>li>a:hover {
     color: rgb(68, 68, 161);
     transform: scale(1.1);
     transition: all 0.4s;
-
 }
 
 /* STICKY ANIMATIONS */
@@ -122,6 +137,26 @@ nav>ul>li>a:hover::after {
     }
 }
 
+/* MENU BURGER */
+@media only screen and (min-width:969px) {
+    .burgerIcon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:968px) {
+    #myMenu {
+        display: none;
+    }
+
+    .burgerIcon {
+        display: block;
+        position: relative;
+        float: right;
+        z-index: 1;
+    }
+}
+
 /* MAIN  STRUCTURE** MAIN  STRUCTURE** MAIN  STRUCTURE** MAIN  STRUCTURE*/
 
 .part {
@@ -131,11 +166,12 @@ nav>ul>li>a:hover::after {
 
     width: auto;
     margin-inline: 13%;
-    margin-block: 3%;
+    margin-block: 1%;
     padding: 2%;
 
     border-radius: 3px;
-    background-color: rgb(253, 253, 253);
+    background-color: var(--part-color);
+
 }
 
 .flexContent {
@@ -154,6 +190,8 @@ nav>ul>li>a:hover::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
 }
 
 .texte {
@@ -163,6 +201,13 @@ nav>ul>li>a:hover::after {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    width: 100%;
+}
+
+.icon {
+    height: 300px;
+    width: 300px;
 }
 
 /* DISPLAY BOX (.part) ANIMATION*/
@@ -214,20 +259,35 @@ h1 {
     margin: 1%;
     text-align: center;
 
-    color: #4444a1;
+    color: var(--title-color);
     z-index: 1;
+}
+
+h2 {
+    text-align: center;
 }
 
 p {
     margin: 5px;
-    text-align: justify;
+    text-align: center;
 }
 
-.part#contact > .flexContent > .picture > a,
-.part#contact > .flexContent > .texte > a {
+hr {
+    width: 55%;
+}
+
+#contact>hr {
+    width: 15%;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+.part>#contact>.picture>a,
+.part>#contact>.texte>a {
     margin: 1%;
     padding: 1%;
-    border: solid 1px #0000002f;
+    border: solid 1px var(--button-border);
     border-radius: 10px;
 
     width: 100%;
@@ -236,11 +296,12 @@ p {
     justify-content: space-around;
 
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     font-size: 27px;
 }
 
 /* DISPLAY TITLE 1 (h1) ANIMATION  */
+
 .text-focus-in {
     -webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -274,10 +335,10 @@ p {
     }
 }
 
+/* CV BUTTON */
 
-         
 #curiculum {
-    background-image: linear-gradient(to right, #00b2da 0%, #3a7bd5  51%, #00b2da  100%);
+    background-image: linear-gradient(to right, #00b2da 0%, #3a7bd5 51%, #00b2da 100%);
     margin: 2%;
     padding: 2% 5%;
     text-align: center;
@@ -285,16 +346,34 @@ p {
     transition: 0.5s;
     background-size: 200% auto;
     text-decoration: none;
-    color: white;            
+    color: white;
     border-radius: 4px;
     display: block;
-  }
+}
 
-  #curiculum:hover {
+#curiculum:hover {
     background-position: right center;
-  }
- 
+}
 
+/* CARDS */
+
+.projectCards {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.projectCard {
+    width: 33%;
+    margin: 2%;
+
+
+    border-radius: 3px;
+    box-shadow: 0 0 24px 1px #00000028;
+}
+
+.projectCard>h2 {
+    height: 125px;
+}
 
 /* MAIN CONTACT ICONS ANIMATION** MAIN CONTACT ICONS ANIMATION** MAIN CONTACT ICONS ANIMATION*/
 
@@ -381,18 +460,109 @@ p {
     }
 }
 
+/* RESPONSIVE */
 
-/* div:nth-child(odd)  { color: red; }
-div:nth-child(even) { color: orange; } */
+@media only screen and (max-width:969px) {
 
+    .part {
+        margin-inline: 5px;
+    }
 
-hr {
-    width: 15%;
-    transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-}         
+    .flexContent {
+        flex-direction: column;
+    }
 
-@media only screen and(max-width:968px) {
-    
+    .icon {
+        margin-bottom: 3%;
+        height: 250px;
+        width: 250px;
+    }
+
+    nav>ul {
+        margin: 0;
+        margin-top: 46px;
+        text-align: center;
+    }
+
+    p {
+        margin-inline: 4%;
+    }
+
+    .projectCard>h2{
+        height: 80px;
+    }
+
+    .projectCards {
+
+        flex-direction: column;
+
+    }
+
+    .projectCard {
+        width: 100%;
+    }
+
+    #contact>hr {
+        display: none;
+    }
+
+    .part>#contact>.picture>a,
+    .part>#contact>.texte>a {
+
+        justify-content: space-evenly;
+
+        margin-inline: 0;
+        margin-block: 1%;
+        padding-block: 1%;
+        padding-inline: 3%;
+
+        width: 280px;
+        max-width: 90%;
+
+        font-size: 22px;
+    }
+
+    .contactIcon {
+        height: 75px;
+        width: 75px;
+    }
+
+    /* ORDERS */
+
+    #project>.flexContent>.picture {
+        order: 1;
+    }
+
+    #project>.flexContent>.texte {
+        order: 2;
+    }
+
+    #contact>.picture {
+        order: 1;
+    }
+
+    #contact>.texte {
+        order: 2;
+    }
+
+    #contact>.picture>a>p {
+        order: 2;
+    }
+
+    #contact>.picture>a>img {
+        order: 1;
+    }
+
+}
+
+.dark-mode {
+    /* Couleurs du thème sombre */
+    --text-color: #ffffff;
+    --bg-color: #000000;
+    --title-color: #7373d1;
+    --part-color: #000000a8;
+    --button-border: #fdfdfd8f;
+    --box-shadow: #ffffff7e;
+
+    background-image: radial-gradient(circle at 44% 13%, rgba(147, 147, 147, 0.05) 0%, rgba(147, 147, 147, 0.05) 98%, transparent 98%, transparent 100%), radial-gradient(circle at 87% 84%, rgba(147, 147, 147, 0.05) 0%, rgba(147, 147, 147, 0.05) 46%, transparent 46%, transparent 100%), radial-gradient(circle at 84% 60%, rgba(147, 147, 147, 0.05) 0%, rgba(147, 147, 147, 0.05) 40%, transparent 40%, transparent 100%), radial-gradient(circle at 21% 32%, rgba(147, 147, 147, 0.05) 0%, rgba(147, 147, 147, 0.05) 28%, transparent 28%, transparent 100%), radial-gradient(circle at 57% 12%, rgba(147, 147, 147, 0.05) 0%, rgba(147, 147, 147, 0.05) 34%, transparent 34%, transparent 100%), radial-gradient(circle at 33% 60%, rgba(147, 147, 147, 0.05) 0%, rgba(147, 147, 147, 0.05) 29%, transparent 29%, transparent 100%), radial-gradient(circle at 3% 11%, rgba(147, 147, 147, 0.05) 0%, rgba(147, 147, 147, 0.05) 60%, transparent 60%, transparent 100%), radial-gradient(circle at 0% 74%, rgba(147, 147, 147, 0.05) 0%, rgba(147, 147, 147, 0.05) 87%, transparent 87%, transparent 100%), linear-gradient(45deg, rgb(0, 0, 0), rgb(12, 11, 11));
 }

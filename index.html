@@ -13,8 +13,9 @@
         rel="stylesheet">
 
 
-    <title>Projet de professionalisation</title>
+    <title>Projet professionnel</title>
 
+    <!-- JS -->
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -23,15 +24,19 @@
 
     <header>
         <nav class="sticky">
-            <ul>
+            <div>
+                <img src="assets/img/navbar/burger.svg" alt="menu burger icon" class="burgerIcon"
+                    onclick="openBurger()">
+            </div>
+            <ul id="myMenu">
                 <li class="tracking-in-expand"><a href="#intro">Qui suis-je ?</a></li>
                 <li class="tracking-in-expand"><a href="#project">Mon projet</a></li>
                 <li class="tracking-in-expand"><a href="#modality">Les modalités</a></li>
                 <li class="tracking-in-expand"><a href="#contact">Contact</a></li>
             </ul>
+
+            <button id="theme-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
         </nav>
-
-
     </header>
 
 
@@ -47,11 +52,18 @@
                 </div>
                 <div class="texte">
 
-                    <p>Aide-soignant en reconversion professionnelle ayant obtenu le titre de Développeur Web & Web
-                        Mobile le 27 Février 2024 (RNCP 31114).</p>
+
+                    <p>Bonjour, <br>
+                        Je suis Charles, j'ai 30 ans, ancien aide-soignant en reconversion professionnelle
+                        j'ai obtenu le titre de Développeur Web & Web Mobile le 27 Février 2024 (RNCP 31114).</p>
                     <p>J'ai découvert l'univers du code à travers une formation courte mais intense qui m'a permis
-                        d'acquérir des bases côté front-end et back-end.</p>
-                    <p>Toutefois ce n'est pour moi que le début du chemin et ma soif d'apprentissage</p>
+                        d'acquérir les bases côté front-end et back-end.</p>
+                    <p>Ce revirement professionel m'a permis de laisser libre court à ma créativité que je n'exprimait
+                        que dans mes loisirs à travers la production de musique assistée par ordinateur et dans la
+                        création de communautées articulées autour d'autres loisirs...</p>
+                    <p>Cette formation m'a permis de confirmer que c'était la voie dans laquelle je
+                        veux construire ma carrière. Je suis maintenant en quête d'approfondir mes connaissances et
+                        de développer de nouvelles compétences !</p>
 
                     <a href="https://charlescoq.github.io" id="curiculum">CV Numérique</a>
                 </div>
@@ -62,25 +74,63 @@
 
             <h1 class="text-focus-in">Mon projet</h1>
 
-            <div class="flexContent">
-                <div class="texte">
+            <div>
+                <div class="flexContent">
+                    <div class="texte">
 
-                    <p>Passionné par le monde du développement informatique, je suis convaincu que l'alternance
-                        représente
-                        le
-                        moyen le plus enrichissant pour perfectionner mes compétences dans ce domaine en perpétuelle
-                        évolution.
-                    </p>
-                    <p>Rien ne me motive davantage que de me plonger dans des défis concrets, de résoudre des problèmes
-                        complexes et d'apprendre continuellement.</p>
-                    <p>C'est dans cet esprit que je recherche activement une opportunité, car je suis convaincu que
-                        c'est là que se trouvent les véritables expériences formatrices.</p>
-                    <p>Je suis prêt à m'investir pleinement, à me challenger et à contribuer de manière significative au
-                        sein d'une entreprise innovante, tout en bénéficiant d'un encadrement professionnel et d'une
-                        formation pratique de qualité.</p>
+                        <h2>Concepteur designer UX/UI</h2>
+
+                        <p>Penser une interface de son design à son utilisation finale, concevoir une expérience
+                            utilisateur simple, fluide et agréable pour l'utilisateur est un process passionant, nous
+                            ammenant à nous questionner et nous remettre en question constament.</p>
+
+                        <p>Il me tarde de me plonger dans des défis concrets, de résoudre des problèmes
+                            complexes et d'apprendre continuellement.</p>
+
+                        <p>C'est dans cet esprit que je recherche activement une opportunité, car je suis convaincu que
+                            c'est là que se trouvent les véritables expériences formatrices.</p>
+
+                        <p>Je suis prêt à m'investir pleinement, à me challenger et à contribuer de manière
+                            significative au
+                            sein d'une entreprise innovante, tout en bénéficiant d'un encadrement professionnel et d'une
+                            formation pratique de qualité.</p>
+                    </div>
+                    <div class="picture">
+                        <img src="assets/img/Projet.svg" alt="icon" class="icon">
+                    </div>
                 </div>
-                <div class="picture">
-                    <img src="assets/img/Projet.svg" alt="icon" class="icon">
+                <div class="projectCards">
+
+                    <div class="projectCard">
+                        <h2>Concevoir les éléments graphiques d'une interface</h2>
+                        <hr>
+                        <ul>
+                            <li>Réaliser des illustrations et des visuels</li>
+                            <li>Concevoir des interfaces graphiques et des prototypes</li>
+                            <li>Réaliser des animations pour différents supports de diffusion</li>
+                        </ul>
+                    </div>
+
+                    <div class="projectCard">
+                        <h2>Réaliser, améliorer et animer des sites web</h2>
+                        <hr>
+                        <ul>
+                            <li>Intégrer des pages web responsive</li>
+                            <li>Adapter des systèmes de gestion de contenus</li>
+                            <li>Optimiser en continu un site web ou une interface</li>
+                        </ul>
+                    </div>
+
+                    <div class="projectCard">
+                        <h2>Gestion et au suivi d'un projet de communication</h2>
+                        <hr>
+                        <ul>
+                            <li>Mettre en œuvre une stratégie webmarketing</li>
+                            <li>Assurer une veille professionnelle</li>
+                            <li>Développer les compétences collectives de son équipe</li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -89,9 +139,12 @@
             <h1 class="text-focus-in">Les Modalités</h1>
             <div class="flexContent">
                 <div class="picture">
-                    <img src="assets/img/Terms.svg" alt="icon">
+                    <img src="assets/img/Terms.svg" alt="icon" class="icon">
                 </div>
                 <div class="texte">
+                    <p>Je suis convaincu que l'alternance représente le moyen le plus enrichissant pour se perfectionner
+                        en affrontant des problématiques concrètes avec des enjeux palpables !</p>
+
                     <p>En tant que candidat ayant déjà une expérience professionnelle solide, je représente un
                         investissement sûr et rentable pour votre entreprise. Mon expérience
                         antérieure dans le monde du travail signifie que je suis déjà familiarisé avec les rouages de
@@ -104,21 +157,34 @@
             </div>
         </div>
 
-        <div class="part slide-in-elliptic-top-fwd" id="contact">
+        <div class="part slide-in-elliptic-top-fwd">
             <h1 class="text-focus-in">Contact</h1>
-            <div class="flexContent">
+            <div class="flexContent" id="contact">
                 <div class="texte">
-                    <a href="tel:0751646297" id="phone" class="heartbeat">
-                        <img src="assets/img/Contact/phone.svg" alt="icon cliquable téléphone">07 51 64 62 97</a>
+                    <a href="tel:0751646297" class="heartbeat">
+                        <img src="assets/img/Contact/phone.svg" class="contactIcon" alt="icon cliquable téléphone">
+                        <p style="margin: 0;">07 51 64 62 97</p>
+                    </a>
+
                     <a href="mailto:charlescoquerelle.1993@gmail.com" class="heartbeat">
-                        <img src="assets/img/Contact/mail.svg" alt="icone cliquable email">Écrivez-moi !</a>
+                        <img src="assets/img/Contact/mail.svg" class="contactIcon" alt="icone cliquable email">
+                        <p>Écrivez-moi !</p>
+                    </a>
                 </div>
-                <hr />
+
+                <hr/>
+
                 <div class="picture">
-                    <a href="https://github.com/CharlesCoq" class="heartbeat">Github
-                        <img src="assets/img/Contact/github.svg" alt="icon cliquable github"></a>
-                    <a href="https://www.linkedin.com/in/charles-coquerelle-007235291/" class="heartbeat">Linked in
-                        <img src="assets/img/Contact/linkedin.svg" alt="icon cliquable linkedin"></a>
+                    <a href="https://github.com/CharlesCoq" class="heartbeat ">
+                        <p>Github</p>
+                        <img src="assets/img/Contact/github.svg" class="contactIcon" alt="icon cliquable github">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/charles-coquerelle-007235291/" class="heartbeat">
+                        <p>
+                            Linked in</p>
+                        <img src="assets/img/Contact/linkedin.svg" class="contactIcon" alt="icon cliquable linkedin">
+                    </a>
                 </div>
 
 
@@ -128,10 +194,6 @@
             </div>
         </div>
     </main>
-
-    <footer>
-
-    </footer>
 
 </body>
 <script src="assets/js/script.js"></script>
