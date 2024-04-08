@@ -289,9 +289,12 @@ a{
 button{
     font-family: "DM Sans", sans-serif;
     font-size: 15px;
+    color: var(--text-color);
     background-color: var(--bg-color);
-    border: solid 1 px var(--button-border);
+    border: solid 1px var(--button-border);
     border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
 }
 
 #contact>hr {
