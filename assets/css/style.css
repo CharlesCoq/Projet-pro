@@ -8,9 +8,13 @@
     --box-shadow: #00000028;
 }
 
+*{
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 html body {
-    overflow-x: hidden;
+  
 
     margin: 0;
     padding: 0;
@@ -78,6 +82,7 @@ nav>ul>li>a:hover {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 
 /* UNDERLINE ANIMATIONS */
@@ -276,6 +281,19 @@ hr {
     width: 55%;
 }
 
+a{
+    /* text-decoration: none; */
+    color:    var(--text-color);
+}
+
+button{
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    background-color: var(--bg-color);
+    border: solid 1 px;
+    border-radius: 5px;
+}
+
 #contact>hr {
     width: 15%;
     transform: rotate(90deg);
@@ -290,7 +308,7 @@ hr {
     border: solid 1px var(--button-border);
     border-radius: 10px;
 
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -360,19 +378,25 @@ hr {
 .projectCards {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .projectCard {
     width: 33%;
     margin: 2%;
 
-
     border-radius: 3px;
-    box-shadow: 0 0 24px 1px #00000028;
+    box-shadow: 0 0 3px 1px var(--box-shadow);
+
+    text-align: center;
+    list-style: none;
 }
 
 .projectCard>h2 {
     height: 125px;
+    padding-inline: 10px;
 }
 
 /* MAIN CONTACT ICONS ANIMATION** MAIN CONTACT ICONS ANIMATION** MAIN CONTACT ICONS ANIMATION*/
@@ -465,7 +489,8 @@ hr {
 @media only screen and (max-width:969px) {
 
     .part {
-        margin-inline: 5px;
+        margin-inline: 0;
+        padding: 1%;
     }
 
     .flexContent {
@@ -488,18 +513,25 @@ hr {
         margin-inline: 4%;
     }
 
-    .projectCard>h2{
+    .projectCard>h2 {
         height: 80px;
+        overflow-y: hidden;
     }
 
     .projectCards {
-
         flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
 
     }
 
     .projectCard {
-        width: 100%;
+        width: 96%;
+    }
+
+    .projectCard>ul{
+        padding: 0;
+        list-style: none;
     }
 
     #contact>hr {
@@ -544,7 +576,7 @@ hr {
     #contact>.texte {
         order: 2;
     }
-
+    
     #contact>.picture>a>p {
         order: 2;
     }
