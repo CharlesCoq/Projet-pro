@@ -290,7 +290,7 @@ button{
     font-family: "DM Sans", sans-serif;
     font-size: 15px;
     background-color: var(--bg-color);
-    border: solid 1 px;
+    border: solid 1 px var(--button-border);
     border-radius: 5px;
 }
 
